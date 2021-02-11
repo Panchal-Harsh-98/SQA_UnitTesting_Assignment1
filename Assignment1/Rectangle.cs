@@ -1,4 +1,5 @@
 using System;
+using System.CodeDom;
 
 namespace Assignment1
 {
@@ -21,6 +22,7 @@ namespace Assignment1
 
         public int getLength()
         {
+            
             return this.length;
         }
 
@@ -32,12 +34,28 @@ namespace Assignment1
         //setlength setwidth get perimeter getarea
         public void setLength(int length)
         {
-            this.length = length;
+            if (length > 1)
+            {
+                this.length = length;    
+            }
+            else
+            {
+                Console.WriteLine("Length should not be less than 1");
+            }
+            
         }
 
         public void setWidth(int width)
         {
-            this.width = width;
+            if (width > 1)
+            {
+                this.width = width;
+            }
+            else
+            {
+                Console.WriteLine("Width should not be less than 1");
+            }
+            
         }
 
         public int getPerimeter()
