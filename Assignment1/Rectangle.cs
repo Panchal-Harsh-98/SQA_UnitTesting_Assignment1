@@ -7,13 +7,13 @@ namespace Assignment1
         private int length;
         private int width;
 
-        Rectangle()
+        public Rectangle()
         {
             this.length = 1;
             this.width = 1;
         }
 
-        Rectangle(int length, int width)
+        public Rectangle(int length, int width)
         {
             this.length = length;
             this.width = width;
