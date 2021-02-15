@@ -9,28 +9,45 @@ namespace Tests
         
         // test case to check the get methods
         [Test]
-        public void CheckMeasurementReturns()
+        public void CheckGetLength()
+        {
+            Rectangle defaultObj = new Rectangle();
+            
+            Assert.AreEqual(1,defaultObj.getLength());
+        }
+
+        [Test]
+        public void CheckGetWidth()
         {
             Rectangle defaultObj = new Rectangle();
             Assert.AreEqual(1,defaultObj.getWidth());
-            Assert.AreEqual(1,defaultObj.getLength());
         }
 
         // test case to check the set methods
         [Test]
-        public void CheckSetMeasurement()
+        public void CheckSetLength()
         {
             // arrange
             int setLength = 44;
-            int setWidth = 33;
+            
             Rectangle obj = new Rectangle();
             // act
             obj.setLength(setLength);
-            obj.setWidth(setWidth);
+            
             // assert
             var actualLength = obj.getLength();
-            var actualWidth = obj.getWidth();
+            
             Assert.AreEqual(setLength,actualLength,"Length is not set properly");
+            
+        }
+
+        [Test]
+        public void CheckSetWidth()
+        {
+            int setWidth = 33;
+            Rectangle obj = new Rectangle();
+            obj.setWidth(setWidth);
+            var actualWidth = obj.getWidth();
             Assert.AreEqual(setWidth,actualWidth,"width is not set properly");
         }
         
